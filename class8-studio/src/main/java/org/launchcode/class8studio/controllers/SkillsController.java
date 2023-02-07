@@ -32,7 +32,7 @@ public class SkillsController {
     public String displaySkillsForm() {
         return "<html>" +
                 "<body>" +
-                "<form action='/form' method='POST'>" +
+                "<form action='/results' method='POST'>" +
                 "<label>Name:</label>" +
                 "<input type='text' name='userName' />" +
                 "<label>My favorite language:</label>" +
@@ -65,7 +65,7 @@ public class SkillsController {
                 "</html>";
     }
 
-    @PostMapping("/form")
+    @PostMapping("/results")
     public String skillsOutput(@RequestParam String userName, String fave1, String fave2, String fave3) {
            return "<html>" +
                 "<body>" +
