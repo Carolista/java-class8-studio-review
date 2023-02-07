@@ -31,7 +31,7 @@ public class SkillsController {
                 "<body>" +
                 "<form action='/form' method='POST'>" +
                 "<label>Name:</label>" +
-                "<input type='text' name='userName' />" +
+                "<input type='text' name='userName' /><br />" +
                 "<label>My favorite language:</label>" +
                 "<select name='fave1'>" +
                 "<option value='Java'>Java</option>" +
@@ -39,7 +39,7 @@ public class SkillsController {
                 "<option value='TypeScript'>TypeScript</option>" +
                 "<option value='Python'>Python</option>" +
                 "<option value='Ruby'>Ruby</option>" +
-                "</select>" +
+                "</select><br />" +
                 "<label>My second favorite language:</label>" +
                 "<select name='fave2'>" +
                 "<option value='Java'>Java</option>" +
@@ -47,7 +47,7 @@ public class SkillsController {
                 "<option value='TypeScript'>TypeScript</option>" +
                 "<option value='Python'>Python</option>" +
                 "<option value='Ruby'>Ruby</option>" +
-                "</select>" +
+                "</select><br />" +
                 "<label>My third favorite language:</label>" +
                 "<select name='fave3'>" +
                 "<option value='Java'>Java</option>" +
@@ -55,7 +55,7 @@ public class SkillsController {
                 "<option value='TypeScript'>TypeScript</option>" +
                 "<option value='Python'>Python</option>" +
                 "<option value='Ruby'>Ruby</option>" +
-                "</select>" +
+                "</select><br />" +
                 "<input type='submit' value='Submit' />" +
                 "</form>" +
                 "</body>" +
