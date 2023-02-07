@@ -73,6 +73,7 @@ public class SkillsController {
                 "<li>" + fave3 + "</li>" +
                 "</ol>" +
                 "</body>" +
-                "</html>";    }
+                "</html>";
+    }
 
 }
