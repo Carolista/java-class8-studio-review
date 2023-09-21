@@ -10,12 +10,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @ResponseBody
 public class SkillsController {
 
+    // Corresponds to localhost:8080
     @GetMapping("/")
     public String displayHomePage() {
         return "<html>" +
                 "<body>" +
                 "<h1>Skills Tracker</h1>" +
-                "<h3>We have a few skills we would like to learn. Here is the list!</h3>" +
+                "<h2>We have a few skills we would like to learn. Here is the list!</h3>" +
                 "<ol>" +
                 "<li>Java</li>" +
                 "<li>JavaScript</li>" +
@@ -66,30 +67,26 @@ public class SkillsController {
     }
 
     @PostMapping("/results")
-    public String skillsOutput(@RequestParam String userName, String fave1, String fave2, String fave3) {
+    public String processSkillsForm(@RequestParam String userName, String fave1, String fave2, String fave3) {
         return "<html>" +
                 "<body>" +
                 "<h1>" + userName + "</h1>" +
+                "<h3>Favorite Languages</h3>" +
                 "<table>" +
                 "<tr>" +
-                "<th></th>" +
-                "<th>Language</th>" +
-                "</tr>" +
-                "<tr>" +
-                "<td>1</td>" +
+                "<td>1.</td>" +
                 "<td>" + fave1 + "</td>" +
                 "</tr>" +
                 "<tr>" +
-                "<td>2</td>" +
+                "<td>2.</td>" +
                 "<td>" + fave2 + "</td>" +
                 "</tr>" +
                 "<tr>" +
-                "<td>3</td>" +
+                "<td>3.</td>" +
                 "<td>" + fave3 + "</td>" +
                 "</tr>" +
                 "</table>" +
                 "</body>" +
                 "</html>";
     }
-
 }
