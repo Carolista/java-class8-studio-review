@@ -67,14 +67,27 @@ public class SkillsController {
 
     @PostMapping("/results")
     public String skillsOutput(@RequestParam String userName, String fave1, String fave2, String fave3) {
-           return "<html>" +
+        return "<html>" +
                 "<body>" +
                 "<h1>" + userName + "</h1>" +
-                "<ol>" +
-                "<li>" + fave1 + "</li>" +
-                "<li>" + fave2 + "</li>" +
-                "<li>" + fave3 + "</li>" +
-                "</ol>" +
+                "<table>" +
+                "<tr>" +
+                "<th></th>" +
+                "<th>Language</th>" +
+                "</tr>" +
+                "<tr>" +
+                "<td>1</td>" +
+                "<td>" + fave1 + "</td>" +
+                "</tr>" +
+                "<tr>" +
+                "<td>2</td>" +
+                "<td>" + fave2 + "</td>" +
+                "</tr>" +
+                "<tr>" +
+                "<td>3</td>" +
+                "<td>" + fave3 + "</td>" +
+                "</tr>" +
+                "</table>" +
                 "</body>" +
                 "</html>";
     }
