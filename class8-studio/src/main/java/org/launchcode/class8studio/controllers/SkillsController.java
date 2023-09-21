@@ -16,7 +16,7 @@ public class SkillsController {
         return "<html>" +
                 "<body>" +
                 "<h1>Skills Tracker</h1>" +
-                "<h2>We have a few skills we would like to learn. Here is the list!</h3>" +
+                "<h2>We have a few skills we would like to learn. Here is the list!</h2>" +
                 "<ol>" +
                 "<li>Java</li>" +
                 "<li>JavaScript</li>" +
@@ -29,6 +29,7 @@ public class SkillsController {
                 "</html>";
     }
 
+    // Corresponds to localhost:8080/form before form submission
     @GetMapping("/form")
     public String displaySkillsForm() {
         return "<html>" +
@@ -66,6 +67,7 @@ public class SkillsController {
                 "</html>";
     }
 
+    // Corresponds to localhost:8080/form after form submission
     @PostMapping("/form")
     public String processSkillsForm(@RequestParam String userName, String fave1, String fave2, String fave3) {
         return "<html>" +
