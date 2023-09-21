@@ -1,18 +1,22 @@
 package org.launchcode.class8studio.controllers;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @ResponseBody
 public class SkillsController {
 
+    // Corresponds to localhost:8080
     @GetMapping("/")
     public String displayHomePage() {
         return "<html>" +
                 "<body>" +
                 "<h1>Skills Tracker</h1>" +
-                "<h3>We have a few skills we sould like to learn. Here is the list!</h3>" +
+                "<h2>We have a few skills we would like to learn. Here is the list!</h3>" +
                 "<ol>" +
                 "<li>Java</li>" +
                 "<li>JavaScript</li>" +
@@ -63,10 +67,11 @@ public class SkillsController {
     }
 
     @PostMapping("/form")
-    public String skillsOutput(@RequestParam String userName, String fave1, String fave2, String fave3) {
-           return "<html>" +
+    public String processSkillsForm(@RequestParam String userName, String fave1, String fave2, String fave3) {
+        return "<html>" +
                 "<body>" +
                 "<h1>" + userName + "</h1>" +
+                "<h3>Favorite Languages</h3>" +
                 "<ol>" +
                 "<li>" + fave1 + "</li>" +
                 "<li>" + fave2 + "</li>" +
@@ -75,5 +80,4 @@ public class SkillsController {
                 "</body>" +
                 "</html>";
     }
-
 }
