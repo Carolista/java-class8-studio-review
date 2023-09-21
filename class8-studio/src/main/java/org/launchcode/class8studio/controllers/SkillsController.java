@@ -15,7 +15,7 @@ public class SkillsController {
         return "<html>" +
                 "<body>" +
                 "<h1>Skills Tracker</h1>" +
-                "<h3>We have a few skills we sould like to learn. Here is the list!</h3>" +
+                "<h3>We have a few skills we would like to learn. Here is the list!</h3>" +
                 "<ol>" +
                 "<li>Java</li>" +
                 "<li>JavaScript</li>" +
